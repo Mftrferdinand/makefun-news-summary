@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+"""
+News summary entry for make.fun bounty news-summary-01
+Summary of November 11, 2026 world news
+"""
+
+from pathlib import Path
+
+
+def main():
+    summary = """Spain witnessed its first general strike in 14 years on November 11, 2026, as workers across the nation protested soaring housing costs that have pushed homeownership beyond reach for millions. The nationwide action brought together labor unions, social movements, and frustrated citizens demanding government intervention in a crisis that has seen rental prices surge over 40% in major cities since 2020.
+
+The strike paralyzed Madrid and Barcelona, with demonstrations drawing hundreds of thousands into the streets. Workers demanded rent controls, increased social housing construction, and restrictions on foreign property investment that critics say inflates local prices. The housing shortage has become Spain's defining domestic crisis, with young professionals increasingly forced to live with parents or leave urban centers entirely.
+
+In climate news, Oil Change International released its COP30 Media Advisory, urging negotiators to commit to concrete fossil fuel phase-out timelines ahead of next month's summit in Brazil. The advocacy group warned that current national pledges fall short of limiting warming to 1.5°C.
+
+NASA's Astronomy Picture of the Day highlighted NGC 4449, a small galaxy producing stars at an extraordinary rate—a rare phenomenon that may help scientists understand galaxy evolution in the early universe.
+
+Middle East tensions continued as AD Ports reported a 73% profit jump, attributed to strategic pivots after the Hormuz Strait closure disrupted traditional shipping lanes. The company's success underscores the Gulf region's race to establish alternative logistics corridors.
+
+Iran saw scattered protests commemorated in the NCRI's daily briefing, while mortgage rates in the U.S. ticked upward slightly after a recent dip, signaling persistent uncertainty in global financial markets.
+
+Veterans Day observances were held worldwide, marking the armistice anniversary with ceremonies honoring fallen soldiers."""
+
+    output = Path("/output/entry.txt")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(summary, encoding="utf-8")
+    print(f"✓ Summary written to {output} ({len(summary)} chars)")
+
+
+if __name__ == "__main__":
+    main()
